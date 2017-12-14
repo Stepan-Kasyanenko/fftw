@@ -1,7 +1,7 @@
 PREFIX=/usr/local
 
-keyfinder-cli: fftw_test.cpp
-	$(CXX) $< -std=c++11 -Wall -lkeyfinder -lavcodec -lavformat -lavutil -lavresample -o $@
+fftw: fftw_test.cpp
+	$(CXX) $< -std=c++11 -Wall -lfftw3-3  -o $@
 
 install: fftw fftw.1
 	install -d "${DESTDIR}${PREFIX}/bin"
