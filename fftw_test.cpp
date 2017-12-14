@@ -5,10 +5,13 @@
 
 int main(void)
 {
-    KeyFinder::KeyFinder key_finder;
-    KeyFinder::AudioData audio_data;
-    KeyFinder::key_t key;
-    KeyFinder::Workspace workspace;
-    std::cout<<"hello 5"<<"\n";
+    std::cout<<"heelo 7"<<"\n";
+    KeyFinder::FftAdapter fftAdapter = new KeyFinder::FftAdapter(4);
+    fftAdapter->setInput(0,0.12);
+    fftAdapter->setInput(1,0.32);
+    fftAdapter->setInput(2,0.43);
+    fftAdapter->setInput(3,0.56);
+    fftAdapter->execute();
+    std::cout<<fftAdapter->getOutputReal(0)<<"\n";
     return 0;
 }
