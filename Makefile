@@ -1,0 +1,13 @@
+PREFIX=/usr/local
+
+keyfinder-cli: fftw_test.cpp
+	$(CXX) $< -std=c++11 -Wall -lkeyfinder -o $@
+
+install: fftw fftw.1
+	install -d "${DESTDIR}${PREFIX}/bin"
+	install -m 755 fftw "${DESTDIR}${PREFIX}/bin/fftw"
+	install -d "${DESTDIR}${PREFIX}/share/man/man1"
+	install -m 644 fftw.1 "${DESTDIR}${PREFIX}/share/man/man1/fftw.1"
+
+clean:
+	rm fftw
