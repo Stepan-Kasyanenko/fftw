@@ -1,7 +1,7 @@
 PREFIX=/usr/local
 
 fftw: fftw_test.cpp
-	$(CXX) $< -std=c++11 -Wall -lfftw3-3  -o $@
+	$(CXX) $< -std=c++11 -Wall -lkeyfinder -o $@
 
 install: fftw fftw.1
 	install -d "${DESTDIR}${PREFIX}/bin"
