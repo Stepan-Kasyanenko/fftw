@@ -23,7 +23,7 @@ int main(void)
     }                
     fftAdapter->execute();
     for ( int j = 0; j < 10; j++ ) {
-      std::cout << fftAdapter->getOutputReal(j) << "\n"
+      std::cout << fftAdapter->getOutputReal(j) << "\n";
     } 
     return 0;
 }
