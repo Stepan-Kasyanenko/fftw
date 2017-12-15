@@ -1,7 +1,7 @@
 #include <iostream>
 #include <keyfinder/fftadapter.h>
 
-#define NUM_POINTS 64
+#define NUM_POINTS 10
 
 int main(void)
 {
